@@ -1,0 +1,24 @@
+{
+  "name": "WebServiceRest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joaquimlagos/WebServiceRest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joaquimlagos/WebServiceRest/issues"
+  },
+  "homepage": "https://github.com/Joaquimlagos/WebServiceRest#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "soap": "^0.37.0"
+  }
+}
