@@ -1,20 +1,18 @@
-const soap = require('soap');
-const wsdl = 'http://www.dneonline.com/calculator.asmx?wsdl';
-function sum (value1, value2){
- soap.createClient(wsdl, (err, cli) => {
- if (err) {
-    console.log(err);
-} else {
-    cli.Add({ intA: value1, intB: value2 }, (err, result) => {
-    if (err) {
-        console.log(err);
-    } else {
-       return result.AddResult;
-        }
-        console.log(result.AddResult);
-    });
-}
-});
-}
+const soap = require("soap");
+const wsdl = "http://www.dneonline.com/calculator.asmx?wsdl";
 
-module.exports = sum;
+class CalcController {
+  async sum(value1, value2) {
+    const soapClient = await soap.createClientAsync(wsdl);
+    
+      await soapClient.Add({ intA: value1, intB: value2 }, (err, result) => {
+      if (err) {
+        console.log(err);
+      }
+      return result.AddResult;
+    })
+  }
+}
+module.exports = CalcController;
+
+
