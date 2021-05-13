@@ -1,17 +1,8 @@
-const CalcController = require('../sum');
-const calcontroller = new CalcController();
+const CalcSum = require('../sum');
+const calcSum = new CalcSum();
 class CalculatorController{
-        adder (req,res){
-        const{
-            value1,
-            value2,
-        }= req.body;
-
-        const result = calcontroller.sum(value1,value2);
-        console.log(result);
-        return res.status(200).json({
-          Response: result
-        })
+       adder (req, res){
+        const result = calcSum.sum(req,res);
       }
     }
 module.exports = CalculatorController;

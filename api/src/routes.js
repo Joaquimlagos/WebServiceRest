@@ -4,5 +4,5 @@ const router = express.Router();
 
 const calculatorController = new CalculatorController();
 
-router.get("/soma", calculatorController.adder);
+router.post("/soma", calculatorController.adder);
 module.exports = router;
