@@ -1,24 +1,23 @@
 const soap = require("soap");
 const wsdl = "http://www.dneonline.com/calculator.asmx?wsdl";
 
-class CalcSum {
-  async sum(req, res) {
+class CalcMultiply {
+  async multiply(req, res) {
     const {
       value1,
       value2
     } = req.body;
     const soapClient = await soap.createClientAsync(wsdl);
     
-      await soapClient.Add({ intA: value1, intB: value2 }, (err, result) => {
+      await soapClient.Multiply({ intA: value1, intB: value2 }, (err, result) => {
       if (err) {
         console.log(err);
       }
+      console.log(result.MultiplytResult)
       return res.status(200).json({
-        Response: result.AddResult 
+        Response: result.MultiplytResult 
       })
     })
   }
 }
-module.exports = CalcSum;
-
-
+module.exports = CalcMultiply;
