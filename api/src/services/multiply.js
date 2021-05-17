@@ -13,9 +13,8 @@ class CalcMultiply {
       if (err) {
         console.log(err);
       }
-      console.log(result.MultiplytResult)
       return res.status(200).json({
-        Response: result.MultiplytResult 
+        Response: result.MultiplyResult 
       })
     })
   }

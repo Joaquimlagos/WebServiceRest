@@ -1,10 +1,12 @@
-const CalcSum = require('../sum');
-const CalcSubtract = require('../subtract');
-const CalcMultiply = require('../multiply');
+const CalcSum = require('../services/sum');
+const CalcSubtract = require('../services/subtract');
+const CalcMultiply = require('../services/multiply');
+const CalcDivide = require('../services/divide');
 
 const calcSum = new CalcSum();
 const calcSubtract = new CalcSubtract();
 const calcMultiply = new CalcMultiply();
+const calcDivide = new CalcDivide();
 
 class CalculatorController{
  
@@ -17,9 +19,12 @@ class CalculatorController{
       }
 
       multiply (req,res){
-        const resultSubtract = calcMultiply.multiply(req,res);
+        const resultMultiply = calcMultiply.multiply(req,res);
       }
 
+      divide (req,res){
+        const resultDivide = calcDivide.divide(req,res);
+      }
 
     }
 module.exports = CalculatorController;
