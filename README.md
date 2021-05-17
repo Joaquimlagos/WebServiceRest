@@ -48,14 +48,19 @@ $ yarn start
 # ou
 $ npm start
 ```
+
+------
+
+## Como testar o projeto 💡
  O programa irá executar em localhost:3030/ 
- # o nome da operação ex: localhost:3030/sum.
+ ex: localhost:3030/sum.
 
  Para testar o programa é recomendado utilizar o [insomnia](https://insomnia.rest/download) ou o [postman](https://www.postman.com).
 
  Utilizar o metodo http POST e escrever a seguinte requisição em JSON: 
-
+```bash
  {
      value1: # 1° valor da operação ,
      value2: # 2° valor da operação
  }
+```
